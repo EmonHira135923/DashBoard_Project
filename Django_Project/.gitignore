@@ -1,0 +1,4 @@
+env_task/
+__pycache__/
+migrations/
+db.sqlite3
