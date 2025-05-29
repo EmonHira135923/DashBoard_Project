@@ -16,7 +16,7 @@
 </head>
 <body class="bg-gray-100 p-6 md:p-8">
     <div class="max-w-[1800px] mx-auto">
-        <!-- Header Section -->
+        {% comment %}  Header Section {% endcomment %}
         <header class="mb-6 md:mb-6 flex justify-between items-center">
             <div class="text-xl md:text-2xl font-bold sm:text-medium">DashBoard</div>
             <div class="flex gap-2 md:gap-4">
@@ -29,9 +29,13 @@
             </div>
         </header>
 
-        <!-- Stats Cards -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6 md:mb-8">
-            <!-- Card 1 -->
+     {% comment %} Main Section  {% endcomment %}
+
+
+        <main>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6 md:mb-8">
+            {% comment %} Card 1 {% endcomment %}
             <div class="shadow-sm p-4 md:p-6 bg-white rounded-xl">
                 <h3 class="text-xs md:text-sm text-gray-500 mb-2 md:mb-4 font-medium">Total Task</h3>
                 <div class="flex justify-between items-start">
@@ -47,7 +51,7 @@
                 </div>
             </div>
 
-            <!-- Card 2 -->
+            {% comment %} Card 2 {% endcomment %}
             <div class="shadow-sm p-4 md:p-6 bg-white rounded-xl">
                 <h3 class="text-xs md:text-sm text-gray-500 mb-2 md:mb-4 font-medium">Complete Task</h3>
                 <div class="flex justify-between items-start">
@@ -63,7 +67,8 @@
                 </div>
             </div>
 
-            <!-- Card 3 -->
+             {% comment %} Card 3  {% endcomment %}
+
             <div class="shadow-sm p-4 md:p-6 bg-white rounded-xl">
                 <h3 class="text-xs md:text-sm text-gray-500 mb-2 md:mb-4 font-medium">Task In Progress</h3>
                 <div class="flex justify-between items-start">
@@ -79,7 +84,8 @@
                 </div>
             </div>
 
-            <!-- Card 4 -->
+            {% comment %} Card 4  {% endcomment %}
+
             <div class="shadow-sm p-4 md:p-6 bg-white rounded-xl">
                 <h3 class="text-xs md:text-sm text-gray-500 mb-2 md:mb-4 font-medium">TO Do List</h3>
                 <div class="flex justify-between items-start">
@@ -96,9 +102,12 @@
             </div>
         </div>
 
-        <!-- Tasks Section -->
+        {% comment %} Tasks Section {% endcomment %}
+
         <div class="grid grid-cols-1 lg:grid-cols-6 gap-4 md:gap-6">
-            <!-- Today's Tasks -->
+
+            {% comment %} Today's Tasks {% endcomment %}
+
             <div class="lg:col-span-2 shadow-sm bg-white p-4 md:p-6 rounded-xl">
                 <h3 class="font-semibold text-xl md:text-2xl mb-3 md:mb-4">Today's Task</h3>
                 
@@ -129,13 +138,14 @@
                 </div>
             </div>
 
-            <!-- All Tasks Table -->
+            {% comment %} All Tasks Table  {% endcomment %}
+
             <div class="lg:col-span-4 shadow-sm bg-white rounded-xl overflow-x-auto">
                 <div class="p-4 md:p-6">
                     <h3 class="font-semibold text-xl md:text-2xl mb-4">All Task</h3>
                     
                     <div class="min-w-[600px]">
-                        <!-- Table Header -->
+                         {% comment %} Table Header {% endcomment %}
                         <div class="grid grid-cols-4 p-2 md:p-4 border-b border-gray-100 text-xs md:text-sm text-gray-500">
                             <div>TASK TITLE</div>
                             <div>PRIORITY</div>
@@ -143,9 +153,12 @@
                             <div>CREATED AT</div>
                         </div>
                         
-                        <!-- Table Rows -->
+                        {% comment %} Table Rows {% endcomment %}
+
                         <div class="divide-y divide-gray-100">
-                            <!-- Row 1 -->
+
+                            {% comment %}  Row 1  {% endcomment %}
+
                             <div class="grid grid-cols-4 p-2 md:p-4 items-center text-xs md:text-sm">
                                 <div class="flex items-center gap-2 md:gap-4">
                                     <div class="h-2 w-2 md:h-3 md:w-3 bg-blue-500 rounded-full"></div>
@@ -160,7 +173,8 @@
                                 <div class="text-gray-500">11 Month ago</div>
                             </div>
                             
-                            <!-- Row 2 -->
+                            {% comment %} Row 2  {% endcomment %}
+
                             <div class="grid grid-cols-4 p-2 md:p-4 items-center text-xs md:text-sm">
                                 <div class="flex items-center gap-2 md:gap-4">
                                     <div class="h-2 w-2 md:h-3 md:w-3 bg-yellow-500 rounded-full"></div>
@@ -175,7 +189,8 @@
                                 <div class="text-gray-500">10 Month ago</div>
                             </div>
                             
-                            <!-- Row 3 -->
+                            {% comment %} Row 3 {% endcomment %}
+
                             <div class="grid grid-cols-4 p-2 md:p-4 items-center text-xs md:text-sm">
                                 <div class="flex items-center gap-2 md:gap-4">
                                     <div class="h-2 w-2 md:h-3 md:w-3 bg-green-500 rounded-full"></div>
@@ -194,6 +209,7 @@
                 </div>
             </div>
         </div>
+        </main>
     </div>
 </body>
 </html>

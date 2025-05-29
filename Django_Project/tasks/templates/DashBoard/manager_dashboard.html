@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-6 md:p-8">
+    <div class="max-w-[1800px] mx-auto">
+        {% comment %} Header Section {% endcomment %}
+
+        <header class="mb-6 md:mb-6 flex justify-between items-center">
+            <div class="text-xl md:text-2xl font-bold sm:text-medium">DashBoard</div>
+            <div class="flex gap-2 md:gap-4">
+                <button class="p-1 md:p-2 bg-gray-50 rounded-full hover:bg-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                    </svg>
+                </button>
+                <button class="p-1 md:p-2 rounded-full w-8 h-8 md:w-10 md:h-10 bg-blue-500 text-white font-semibold text-sm md:text-xl">B</button>
+            </div>
+        </header>
+
+        {% comment %} Stats Cards {% endcomment %}
+
+        <main>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6 md:mb-8">
+
+            {% comment %} Card 1 {% endcomment %}
+
+            <div class="shadow-sm p-4 md:p-6 bg-white rounded-xl">
+                <h3 class="text-xs md:text-sm text-gray-500 mb-2 md:mb-4 font-medium">Total Task</h3>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">3</p>
+                        <p class="text-xs md:text-sm text-gray-500">111 Last Month</p>
+                    </div>
+                    <div class="bg-blue-100 p-2 md:p-3 rounded-full text-blue-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            {% comment %} Card 2 {% endcomment %}
+
+            <div class="shadow-sm p-4 md:p-6 bg-white rounded-xl">
+                <h3 class="text-xs md:text-sm text-gray-500 mb-2 md:mb-4 font-medium">Complete Task</h3>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">5</p>
+                        <p class="text-xs md:text-sm text-gray-500">111 Last Year</p>
+                    </div>
+                    <div class="bg-green-100 p-2 md:p-3 rounded-full text-green-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            {% comment %} Card 3 {% endcomment %}
+
+            <div class="shadow-sm p-4 md:p-6 bg-white rounded-xl">
+                <h3 class="text-xs md:text-sm text-gray-500 mb-2 md:mb-4 font-medium">Task In Progress</h3>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">1</p>
+                        <p class="text-xs md:text-sm text-gray-500">100 Last Month</p>
+                    </div>
+                    <div class="bg-yellow-100 p-2 md:p-3 rounded-full text-yellow-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            {% comment %} Card 4 {% endcomment %}
+
+
+            <div class="shadow-sm p-4 md:p-6 bg-white rounded-xl">
+                <h3 class="text-xs md:text-sm text-gray-500 mb-2 md:mb-4 font-medium">TO Do List</h3>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-2xl md:text-3xl font-bold mb-2 md:mb-4">2</p>
+                        <p class="text-xs md:text-sm text-gray-500">11 Last Day</p>
+                    </div>
+                    <div class="bg-purple-100 p-2 md:p-3 rounded-full text-purple-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    {% comment %} Tasks Section {% endcomment %}
+
+
+    <div class="grid grid-cols-1 lg:grid-cols-6 gap-4 md:gap-6">
+
+        {% comment %} All Tasks Table {% endcomment %}
+
+        <div class="lg:col-span-6 shadow-sm bg-white rounded-xl overflow-x-auto">
+            <div class="p-4 md:p-6">
+                <h3 class="font-semibold text-xl md:text-2xl mb-4">All Task</h3>
+                
+                <div class="min-w-[600px]">
+
+                    {% comment %} Table Header  {% endcomment %}
+
+                    <div class="grid grid-cols-4 p-2 md:p-4 border-b border-gray-100 text-xs md:text-sm text-gray-500">
+                        <div>TASK TITLE</div>
+                        <div>PRIORITY</div>
+                        <div>TEAM</div>
+                        <div>CREATED AT</div>
+                    </div>
+                    
+                    {% comment %} Table Rows {% endcomment %}
+
+                    <div class="divide-y divide-gray-100">
+
+                        {% comment %} Row 1 {% endcomment %}
+
+                        <div class="grid grid-cols-4 p-2 md:p-4 items-center text-xs md:text-sm">
+                            <div class="flex items-center gap-2 md:gap-4">
+                                <div class="h-2 w-2 md:h-3 md:w-3 bg-blue-500 rounded-full"></div>
+                                <span class="font-medium">Test Low Task</span>
+                            </div>
+                            <div><span class="text-blue-600 bg-blue-50 px-2 py-1 md:px-3 rounded-xl">Low</span></div>
+                            <div class="flex -space-x-1 md:-space-x-2">
+                                <div class="font-medium border-white text-white bg-blue-500 rounded-full h-6 w-6 md:h-8 md:w-8 flex justify-center items-center border-2 text-xs md:text-sm">AB</div>
+                                <div class="font-medium border-white text-white bg-blue-500 rounded-full h-6 w-6 md:h-8 md:w-8 flex justify-center items-center border-2 text-xs md:text-sm">BC</div>
+                                <div class="font-medium border-white text-white bg-blue-500 rounded-full h-6 w-6 md:h-8 md:w-8 flex justify-center items-center border-2 text-xs md:text-sm">AC</div>
+                            </div>
+                            <div class="text-gray-500">11 Month ago</div>
+                        </div>
+                        
+                        {% comment %} Row 2 {% endcomment %}
+
+                        <div class="grid grid-cols-4 p-2 md:p-4 items-center text-xs md:text-sm">
+                            <div class="flex items-center gap-2 md:gap-4">
+                                <div class="h-2 w-2 md:h-3 md:w-3 bg-yellow-500 rounded-full"></div>
+                                <span class="font-medium">Test Medium Task</span>
+                            </div>
+                            <div><span class="text-yellow-600 bg-yellow-50 px-2 py-1 md:px-3 rounded-xl">Medium</span></div>
+                            <div class="flex -space-x-1 md:-space-x-2">
+                                <div class="font-medium border-white text-white bg-blue-500 rounded-full h-6 w-6 md:h-8 md:w-8 flex justify-center items-center border-2 text-xs md:text-sm">BAB</div>
+                                <div class="font-medium border-white text-white bg-blue-500 rounded-full h-6 w-6 md:h-8 md:w-8 flex justify-center items-center border-2 text-xs md:text-sm">BCB</div>
+                                <div class="font-medium border-white text-white bg-blue-500 rounded-full h-6 w-6 md:h-8 md:w-8 flex justify-center items-center border-2 text-xs md:text-sm">ACC</div>
+                            </div>
+                            <div class="text-gray-500">10 Month ago</div>
+                        </div>
+                        
+                        {% comment %} Row 3 {% endcomment %}
+
+                        <div class="grid grid-cols-4 p-2 md:p-4 items-center text-xs md:text-sm">
+                            <div class="flex items-center gap-2 md:gap-4">
+                                <div class="h-2 w-2 md:h-3 md:w-3 bg-green-500 rounded-full"></div>
+                                <span class="font-medium">Test High Task</span>
+                            </div>
+                            <div><span class="text-green-600 bg-green-50 px-2 py-1 md:px-3 rounded-xl">High</span></div>
+                            <div class="flex -space-x-1 md:-space-x-2">
+                                <div class="font-medium border-white text-white bg-blue-500 rounded-full h-6 w-6 md:h-8 md:w-8 flex justify-center items-center border-2 text-xs md:text-sm">ABC</div>
+                                <div class="font-medium border-white text-white bg-blue-500 rounded-full h-6 w-6 md:h-8 md:w-8 flex justify-center items-center border-2 text-xs md:text-sm">BCD</div>
+                                <div class="font-medium border-white text-white bg-blue-500 rounded-full h-6 w-6 md:h-8 md:w-8 flex justify-center items-center border-2 text-xs md:text-sm">ACE</div>
+                            </div>
+                            <div class="text-gray-500">9 Month ago</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </main>
+    </div>
+</body>
+</html>
