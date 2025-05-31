@@ -62,10 +62,23 @@ WSGI_APPLICATION = 'Task_Management.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# For Postgress
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Task_Management',
+        'USER': 'postgres',
+        'PASSWORD': 'emon',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
